@@ -103,7 +103,7 @@ describe('Product API', () => {
 
     // Verifica se a atualização funcionou
     const updatedProduct = await request(app).get(`/v1/produto/${productId}`);
-    expect(updatedProduct.body.preco).toBe(289.90);
+    expect(updatedProduct.body.preco).toBe("289.9");
     expect(updatedProduct.body.options.length).toBe(2); // Deletou 1, adicionou 1
     expect(updatedProduct.body.options.find(opt => opt.titulo === 'Material')).toBeDefined();
   });

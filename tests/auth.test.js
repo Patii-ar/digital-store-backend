@@ -1,7 +1,6 @@
 const request = require('supertest');
 const app = require('../src/app');
-const { sequelize } = require('../src/database');
-const User = require('../src/models/User');
+const { sequelize, User } = require('../src/database');
 
 describe('Autenticação', () => {
   beforeAll(async () => {
