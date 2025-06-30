@@ -47,6 +47,19 @@ digital-store-backend/
 
 ## ⚙️ Instalação e Execução
 
+## Instale o PostgreSQL 
+PASSOS:
+
+1 - Copie e cole no seu navegador e clique em fazer download segundo o seu dispositivo: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+2 - Durante a instação vai solicitar a criação de uma senha, salve a senha. 
+
+Após instalação, dentro do PostgreSQL você clica no **databases** com o botão direito do mouse seleciona o **create** depois **database**  
+
+Crie um NOME e salve. 
+
+3 - Após isso faça esse passo a passo:
+
 ### 1. Clone o repositório
 
 ```bash
@@ -74,19 +87,10 @@ DB_PASSWORD=sua_senha
 DB_NAME=nome_do_banco
 DB_DIALECT=postgres
 ```
+Altere o DB_NAME para o nome criado no postgreSQL
+Altere o DB_PASSWORD para a senha criada durante a instalação do postgreSQL
+No JWT_SECRET Crie uma senha com ao menos uma letra maiuscula e minuscula, um caractere e numeral. 
 
-### 4. Crie o banco e rode as migrations
-
-```bash
-npx sequelize db:create
-npx sequelize db:migrate
-```
-
-### 5. Inicie o servidor
-
-```bash
-npm run dev
-```
 
 A API estará disponível em: [http://localhost:3001](http://localhost:3001)
 
