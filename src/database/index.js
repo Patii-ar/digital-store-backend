@@ -29,4 +29,9 @@ class Database {
   }
 }
 
-module.exports = new Database();
+const database = new Database();
+
+module.exports = {
+  sequelize: database.connection, // 🔥 exporta a instância Sequelize
+  ...database.connection.models,  // 🔥 exporta os models (User, Category etc.)
+};
